@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Headers from './functions/Header';
+import ProductsList from './functions/ProductsList';
+import Footers  from './functions/Footers';
+import { useState } from 'react';
+ function App() {
+  const [medi,setMedi] = useState(["Liquid", "Tablet", "Capsules", "Injections"]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Headers></Headers>
+      <ProductsList val="medi"> </ProductsList>
+      //MedicineForm...............
+      <Footers></Footers>
     </div>
   );
 }
