@@ -21,7 +21,11 @@ app.set("view engine","ejs");
 
 app.get("/",(req,res)=>{
     db.query("select * from students",(err,data)=>{
+
          res.json(data);
+
+        res.render(data);
+
     })
 });
 
